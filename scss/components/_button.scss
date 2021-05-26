@@ -1,0 +1,35 @@
+.button-black {
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #000000;
+  border-radius: 4px;
+  min-width: 215px;
+  height: 55px;
+  padding: 0 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+
+  }
+}
+.button-black-border {
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
+  background: transparent;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  min-width: 215px;
+  //width: 262px;
+  height: 55px;
+  padding: 0 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+
+  }
+}
+

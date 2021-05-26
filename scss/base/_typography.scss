@@ -1,0 +1,105 @@
+body {
+  color: $text-color;
+  font-family: $font-basic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.75;
+  background: #fff;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: inherit;
+  font-size: 100%;
+  line-height: 1.04;
+  margin: 0;
+  font-family: $font-add;
+  font-weight: 500;
+  strong{
+    font-weight: inherit;
+    color: #6455BF;
+    display: block;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font: inherit;
+  line-height: 1.75;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 55px 0 0;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 50px;
+  margin: 35px 0;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 36px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 23px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+
+@media (max-width: $lg) {
+  h1 {
+    font-size: 45px;
+    line-height: 43px;
+    margin: 50px 0;
+  }
+  h2 {
+    font-size: 38px;
+    line-height: 43px;
+  }
+  h3 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: $md) {
+  h1 {
+    font-size: 40px;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 35px;
+    line-height: 1;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: $sm) {
+  h1 {
+    font-size: 38px;
+    margin: 25px 0;
+  }
+  h2 {
+    font-size: 38px;
+    margin: 25px 0;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}

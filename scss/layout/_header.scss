@@ -1,0 +1,73 @@
+.header {
+  position: relative;
+  z-index: 1;
+  padding: 30px 0;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 1.2;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    strong {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+    &:before {
+      content: '';
+      display: inline-block;
+      margin-right: 18px;
+      width: 65px;
+      height: 74px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include bgsvg('<svg viewBox="0 0 65 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.13281 19.637L32.5002 37.1855V72.2826L2.13281 54.7341L2.13281 19.637Z" fill="#BBABD0"/>
+<path d="M32.5665 2L63.0002 19.5707L32.5665 37.1413L2.13281 19.5707L32.5665 2Z" fill="#715A99"/>
+<path d="M32.5 37.1855L63 19.637V54.7341L32.5 72.2826L32.5 37.1855Z" fill="#330072"/>
+<path d="M62.8674 19.5707L32.4337 2L2 19.5707M62.8674 19.5707L32.4337 37.1413M62.8674 19.5707V54.712L32.4337 72.2826M32.4337 37.1413L2 19.5707M32.4337 37.1413V72.2826M2 19.5707V54.712L32.4337 72.2826" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+</svg>
+');
+    }
+  }
+
+  &__nav {
+    display: flex;
+    li {
+      margin: 0px 14px;
+    }
+    a {
+      line-height: 19px;
+      border-bottom: 3px solid transparent;
+      padding: 0 1px 3px;
+      &.active {
+        border-bottom-color: #5848BA;
+      }
+    }
+  }
+  &__lang {
+    a {
+      padding-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 34px;
+      font-weight: normal;
+      line-height: 19px;
+      text-align: center;
+      border: 1px solid rgba(78, 70, 124, 0.2);
+      border-radius: 3px;
+
+      border-bottom: 3px solid #988DD8;
+
+    }
+  }
+}
