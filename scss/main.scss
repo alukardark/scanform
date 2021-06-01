@@ -14,13 +14,13 @@
 @import "node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
 @import 'vendors/fancy-modal';
 //@import "node_modules/animate.css/animate.min";
-//@import "node_modules/swiper/dist/css/swiper";
+@import "node_modules/swiper/dist/css/swiper";
 //@import "node_modules/wow.js/css/libs/animate";
 //@import "vendors/wow";
-//@import "node_modules/choices.js/public/assets/styles/choices.min";
-//@import "vendors/choices";
-//@import "node_modules/simplebar/dist/simplebar.min";
-//@import "vendors/simplebar";
+@import "node_modules/choices.js/public/assets/styles/choices.min";
+@import "vendors/choices";
+@import "node_modules/simplebar/dist/simplebar.min";
+@import "vendors/simplebar";
 //@import "node_modules/tippy.js/dist/tippy";
 //@import "vendors/tippy";
 //@import "node_modules/tippy.js/dist/themes/light";
@@ -39,6 +39,11 @@
 // 4. Layout-related sections
 @import 'layout/header';
 @import 'layout/main-banner';
+@import 'layout/main-about';
+@import 'layout/main-advantages';
+@import 'layout/main-result';
+@import 'layout/main-news';
+@import 'layout/footer';
 
 
 // 5. Components
@@ -47,7 +52,8 @@
 'components/burger',
 'components/pagination',
 //'components/breadcrumbs',
-'components/button';
+'components/button',
+'components/feedback';
 //'components/modal',
 //'components/waves-effect',
 //'components/add-basket-message',

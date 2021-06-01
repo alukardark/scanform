@@ -1,0 +1,128 @@
+.main-news {
+  background: #fff;
+  padding-bottom: 70px;
+  &__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+  &__all-link {
+    font-size: 18px;
+    color: #000000;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-left: 30px;
+    transform: translateY(-8px);
+    &:hover {
+      border-bottom-color: transparent;
+      opacity: .7;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    li {
+      width: 31.2%;
+      display: flex;
+      flex-direction: column;
+      p {
+        opacity: 0.6;
+        margin: 12px 0 25px;
+        //max-height: 56px;
+        //overflow: hidden;
+      }
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 245px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 12px;
+  }
+  &__date {
+    opacity: .6;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    &:before {
+      content: '';
+      width: 9px;
+      height: 9px;
+      background: #000000;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__link {
+    width: 63px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 46px;
+    position: relative;
+    &:after{
+      content: '';
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 21px;
+      height: 13px;
+      @include bgsvg('<svg viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 0.5L20 6.5L14 12.5" stroke="black"/>
+<path d="M0 6.5H19.5" stroke="black"/>
+</svg>
+');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: .2s ease-in-out all;
+    }
+    &:hover{
+      opacity: .7;
+      &:after{
+        margin-left: 5px;
+      }
+    }
+  }
+  a.main-news__yu {
+    font-size: 14px;
+    text-decoration-line: underline;
+    color: #000000;
+    display: flex;
+    &:before {
+      content: '';
+      width: 21px;
+      height: 14px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include bgsvg('<svg  viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.0926 3.00039C19.9813 2.60672 19.7634 2.24778 19.4608 1.95951C19.1581 1.67123 18.7812 1.46373 18.3679 1.35776C16.7457 0.965393 10.7291 0.965393 10.7291 0.965393C10.7291 0.965393 4.61246 0.965393 3.09028 1.35776C2.67695 1.46373 2.30009 1.67123 1.99741 1.95951C1.69474 2.24778 1.47687 2.60672 1.36562 3.00039C1.08139 4.47893 0.943465 5.97962 0.95365 7.48271C0.943465 8.9858 1.08139 10.4865 1.36562 11.965C1.47687 12.3587 1.69474 12.7176 1.99741 13.0059C2.30009 13.2942 2.67695 13.5017 3.09028 13.6077C4.61246 14 10.7291 14 10.7291 14C10.7291 14 16.7457 14 18.3679 13.6077C18.7812 13.5017 19.1581 13.2942 19.4608 13.0059C19.7634 12.7176 19.9813 12.3587 20.0926 11.965C20.3768 10.4865 20.5147 8.9858 20.5045 7.48271C20.5147 5.97962 20.3768 4.47893 20.0926 3.00039ZM8.77401 10.2758V4.68957L13.7503 7.48271L8.77401 10.2758Z" fill="black"/>
+</svg>
+');
+      margin-right: 7px;
+      display: inline-block;
+      transform: translateY(1px);
+    }
+    &:hover {
+      text-decoration-color: transparent;
+      opacity: .7;
+
+    }
+  }
+
+}

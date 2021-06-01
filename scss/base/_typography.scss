@@ -3,7 +3,7 @@ body {
   font-family: $font-basic;
   font-weight: normal;
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.2;
   background: #fff;
   height: 100%;
 }
@@ -11,14 +11,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font: inherit;
   font-size: 100%;
-  line-height: 1.04;
+  line-height: 1.18;
   margin: 0;
   font-family: $font-add;
   font-weight: 500;
   strong{
     font-weight: inherit;
     color: #6455BF;
-    display: block;
   }
 }
 
@@ -28,27 +27,26 @@ img {
 
 p {
   font: inherit;
-  line-height: 1.75;
   margin: 20px 0;
   font-size: 16px;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 50px;
   margin: 55px 0 0;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 50px;
-  margin: 35px 0;
-  font-weight: 500;
+  font-size: 54px;
+  margin: 25px 0;
+  font-weight: bold;
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 27px;
   margin: 10px 0;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 h4 {

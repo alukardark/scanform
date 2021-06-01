@@ -26,6 +26,7 @@ gulp.task('scripts', function() {
         'node_modules/p5/lib/p5.min.js',
         'node_modules/gsap/dist/gsap.min.js',
         'node_modules/gsap/dist/ScrollTrigger.min.js',
+        'node_modules/choices.js/public/assets/scripts/choices.min.js',
     ])
         .pipe(concat('libs.min.js')) // Собираем их в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
@@ -34,7 +35,6 @@ gulp.task('scripts', function() {
 
 
 gulp.task('serve', function(done) {
-
     browserSync.init({
         server: ""
     });
@@ -46,31 +46,10 @@ gulp.task('serve', function(done) {
     });
     gulp.watch("js/**/*.js").on('change', () => {
         browserSync.reload();
-        return gulp.src([
-            'js/common-dev.js',
-        ])
-            .pipe(babel({
-                "presets": [
-                    [
-                        "@babel/preset-env",
-                        {
-                            "targets": {
-                                "browsers": [
-                                    "last 2 version",
-                                ]
-                            }
-                        }
-                    ]
-                ]
-            }))
-        .pipe(concat('common.js')) // Собираем их в новом файле libs.min.js
-        .pipe(gulp.dest('js')); // Выгружаем в папку js
+        done();
     });
-
-
-
 });
 
 
 
-gulp.task('default', gulp.series('sass',  'scripts', 'serve'));
+gulp.task('default', gulp.series('sass', 'scripts', 'serve'));

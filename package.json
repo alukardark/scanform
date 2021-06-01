@@ -21,6 +21,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.0",
+    "choices.js": "^6.0.0",
     "bootstrap": "4.2.1",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",

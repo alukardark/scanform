@@ -1,0 +1,109 @@
+.main-result {
+  background: #fff;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  &__img {
+    width: 100%;
+    height: 315px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: .2s ease-in-out all;
+      background: linear-gradient(0deg, rgba(109, 85, 255, 0.6), rgba(109, 85, 255, 0.6));
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      width: 86px;
+      height: 93px;
+      transition: .2s ease-in-out all;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      @include bgsvg('<svg  viewBox="0 0 86 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="43" cy="43" r="42.5" stroke="white"/>
+      <path d="M70 76.5L85.5 92" stroke="white"/>
+      <path d="M43 25V61" stroke="white"/>
+      <path d="M60 43L25 43" stroke="white"/>
+      </svg>
+      ');
+    }
+  }
+  p {
+    margin: 14px;
+    max-width: 320px;
+  }
+  &__wrap{
+    position: relative;
+  }
+  &__prev {
+    width: 46px;
+    height: 46px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    background-position: 45% 50%;
+    background-repeat: no-repeat;
+    @include bgsvg('<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 16.5L1.5 8.50001L9.5 0.500008" stroke="black" stroke-opacity="0.6"/>
+</svg>
+');
+    position: absolute;
+    left: -20px;
+    top: 157px;
+    transform: translate(-100%, -50%);
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  &__next {
+    width: 46px;
+    height: 46px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    background-position: 55% 50%;
+    background-repeat: no-repeat;
+    @include bgsvg('<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 0.499992L8.5 8.49999L0.499997 16.5" stroke="black" stroke-opacity="0.6"/>
+</svg>
+');
+    position: absolute;
+    right: -20px;
+    top: 157px;
+    transform: translate(100%, -50%);
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  .swiper-slide{
+    a{
+      display: block;
+      &:hover{
+        .main-result__img:before{
+          opacity: 1;
+        }
+        .main-result__img:after{
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+
+}

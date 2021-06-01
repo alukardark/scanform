@@ -1,58 +1,42 @@
-.scrollbar{
-  .simplebar-content {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+.simplebar-track.simplebar-horizontal {
+  display: none;
+}
+.simplebar-scrollbar {
+  width: 8px;
+  right: 0px;
+  transition: .1s linear all !important;
+}
+.simplebar-scrollbar:before {
+  background: #6455BF;
+  opacity: 1 !important;
+  transition: .2s linear all  !important;
+}
+.simplebar-hover{
+  .simplebar-scrollbar:before{
+    opacity: .8 !important;
   }
-  .simplebar-scrollbar {
-    width: 4px;
-    right: 0px;
-  }
-  .simplebar-scrollbar:before {
-    background-color: #B40600;
-    border-radius: 0px;
-  }
-  .simplebar-track.simplebar-vertical {
-    transition: .5s ease-in-out height;
-    background-color: #E4E4E4;;
-    width: 4px;
-    border-radius: 0px;
-  }
-  .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-    opacity: 1;
-    top: 0px;
-    bottom: 0px;
-  }
-
-  .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
-   display: none;
-  }
-
-
-
-  &--horizontal{
-    .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
-      //display: none;
-      display: block;
-      opacity: 1;
-    }
-    .simplebar-track.simplebar-horizontal {
-      transition: .5s ease-in-out height;
-      background-color: #E4E4E4;;
-      height: 4px;
-      border-radius: 0px;
-    }
-    .simplebar-track.simplebar-horizontal .simplebar-scrollbar{
-      height: 4px;
-      top: 0;
-      left: 0;
-    }
-    .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
-      left: 0px;
-      right: 0px;
-    }
-  }
-
+}
+.simplebar-track.simplebar-vertical {
+  width: 8px;
+  background: #EFEEF3;
+  cursor: pointer;
+  border-radius: 14px;
+}
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0px;
+  bottom: 0px;
 }
 
 
-
+//.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+//  height: 5px;
+//  top: 0px;
+//  background: #6455BF;
+//  border-radius: 14px;
+//}
+//.simplebar-track.simplebar-horizontal {
+//  height: 5px;
+//  background: #EFEEF3;
+//  cursor: pointer;
+//  border-radius: 14px;
+//}

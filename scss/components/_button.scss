@@ -32,4 +32,19 @@
 
   }
 }
+.button-purple{
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #6455BF;
+  border-radius: 4px;
+  min-width: 215px;
+  height: 55px;
+  padding: 0 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
 
+  }
+}
