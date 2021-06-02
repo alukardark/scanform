@@ -417,7 +417,6 @@ var timeline2 = gsap.timeline();
 // });
 
 
-
 jQuery(document).ready(function ($) {
 
     $("input[type='tel']").inputmask({"mask": "+7(999) 999-9999"});
@@ -428,7 +427,7 @@ jQuery(document).ready(function ($) {
         slidesPerView: 3,
         spaceBetween: 2,
         speed: 600,
-         // autoHeight: true,
+        // autoHeight: true,
         // autoplay: {
         //     delay: 3000
         // },
@@ -466,7 +465,6 @@ jQuery(document).ready(function ($) {
 });
 
 
-
 if (document.querySelector('.js-choice') !== null) {
     const choices = new Choices('.js-choice', {
         itemSelectText: '',
@@ -493,3 +491,109 @@ if (document.querySelector('.js-choice') !== null) {
 //         autoHide: false
 //     });
 // });
+
+
+// if (window.location.pathname == '/') {
+//     var animation = bodymovin.loadAnimation({
+//         // container: document.getElementById('bm'),
+//         container: document.querySelector('.animsition-loading'),
+//         renderer: 'svg',
+//         loop: true,
+//         autoplay: true,
+//         // path: directory_uri.stylesheet_directory_uri + '/data.json'
+//         path: '/data.json'
+//     });
+// }
+
+// var logo = document.querySelector('.animsition-loading');
+//
+// var animation = bodymovin.loadAnimation({
+//     container: logo,
+//     renderer: "svg",
+//     loop: true,
+//     autoplay: false,
+//     prerender: true,
+//     path: "/data.json"
+// });
+
+// logo.addEventListener("mouseenter", function () {
+//     animation.play();
+// });
+//
+// logo.addEventListener("mouseleave", function () {
+//     animation.stop();
+// });
+
+var downloadContainer = document.querySelector('.main-about__file');
+var curFrame;
+var animation = lottie.loadAnimation({
+    container: downloadContainer.querySelector('i'),
+    // path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/pause/pause.json',
+    path: '/data.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+});
+
+animation.setSpeed(1.5);
+//
+// downloadContainer.addEventListener('mouseenter', (e) => {
+//     animation.goToAndPlay(0);
+//
+// });
+// downloadContainer.addEventListener('mouseleave', (e) => {
+//
+//     animation.goToAndStop(0);
+//
+// });
+
+
+// downloadContainer.addEventListener('mouseenter', fLaunch);
+//
+// function fLaunch() {
+//     downloadContainer.removeEventListener('mouseenter', fLaunch);
+//     animation.playSegments([curFrame,27], true);
+//     downloadContainer.addEventListener('mouseleave', fReverse);
+//     animation.onEnterFrame = fSaveFrame;
+// }
+//
+// function fReverse() {
+//     downloadContainer.removeEventListener('mouseleave', fReverse);
+//     animation.playSegments([curFrame,0], false);
+//     downloadContainer.addEventListener('mouseenter', fLaunch);
+//     animation.onEnterFrame = fSaveFrame;
+// }
+//
+// function fSaveFrame() {
+//     curFrame = animation.currentFrame;
+// }
+
+
+var loopEnd;
+
+downloadContainer.addEventListener("mouseenter", function () {
+    animation.setDirection(1);
+    animation.play();
+    loopEnd = false;
+});
+downloadContainer.addEventListener("mouseleave", function () {
+    animation.setDirection(-1);
+    animation.play();
+    loopEnd = true;
+});
+
+
+animation.addEventListener('loopComplete', function () {
+    if (loopEnd) {
+        animation.goToAndStop(0);
+    } else{
+        animation.play();
+
+    }
+});
+
+
+
+
+
+

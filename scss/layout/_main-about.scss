@@ -35,16 +35,17 @@
     font-weight: 500;
     font-size: 16px;
     color: #000000;
-    padding: 18px 10px 18px 60px;
+    padding: 18px 10px 18px 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-position: 23px 50%;
-    background-repeat: no-repeat;
-    @include bgsvg('<svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20.4167 8.75H14.5833V0H5.83333V8.75H0L10.2083 18.9583L20.4167 8.75ZM0 21.875V24.7917H20.4167V21.875H0Z" fill="black"/>
-</svg>
-');
+    i{
+      width: 29px;
+      min-width: 29px;
+      height: 31px;
+      display: inline-block;
+      margin-right: 15px;
+    }
   }
   &__advantages {
     display: flex;

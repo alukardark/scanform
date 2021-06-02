@@ -27,6 +27,7 @@ gulp.task('scripts', function() {
         'node_modules/gsap/dist/gsap.min.js',
         'node_modules/gsap/dist/ScrollTrigger.min.js',
         'node_modules/choices.js/public/assets/scripts/choices.min.js',
+        'node_modules/lottie-web/build/player/lottie.js',
     ])
         .pipe(concat('libs.min.js')) // Собираем их в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
