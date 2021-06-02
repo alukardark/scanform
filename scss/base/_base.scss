@@ -29,10 +29,12 @@ body {
   height: 100%;
   min-height: 100%;
 }
-body{
+
+body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
+
 button,
 input,
 select,
@@ -44,13 +46,16 @@ textarea {
   border-radius: 0;
   outline: none;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
 ul {
   margin: 20px 0;
   padding: 0;
@@ -96,10 +101,11 @@ a {
   }
 }
 
-img::selection{
+img::selection {
   background: transparent;
 }
-img::-moz-selection{
+
+img::-moz-selection {
   background: transparent;
 }
 
@@ -107,33 +113,46 @@ input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
   transition: opacity 0.2s ease-in-out;
 }
+
 input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
   transition: opacity 0.2s ease-in-out;
 }
+
 input:-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
   transition: opacity 0.2s ease-in-out;
 }
+
 input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
   transition: opacity 0.2s ease-in-out;
 }
+
 input:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
+
 input:focus::-moz-placeholder {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
+
 input:focus:-moz-placeholder {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
+
 input:focus:-ms-input-placeholder {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
-
-
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

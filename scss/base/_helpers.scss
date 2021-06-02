@@ -11,21 +11,16 @@
 }
 body{
   overflow-x: hidden;
-  background: #EFEEF3;
+  background: #fff;
 }
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  position: relative;
-
-  //transform: translateY(40px);
-  padding-top: 40px;
 }
 
 .wrapper-content {
   flex: 1 0 auto;
-  //transform: translateY(40px);
 }
 
 .sticky {

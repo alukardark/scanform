@@ -1,104 +1,74 @@
 .burger {
-  cursor: pointer;
-  position: relative;
+  //position: fixed;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+  width: 41px;
+  height: 41px;
 
-  width: 66px;
-  height: 66px;
+  right: 0;
   background: #11161B;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: .2s ease-in-out background;
-  &.active {
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  cursor: pointer;
 
-  }
-  &:hover {
-    background: #2f3d4b;
-    span {
-      &, &:before, &:after {
-        //background: rgba(17, 13, 16, 0.82);
-      }
-    }
+  transform: translateY(-50%);
+  top: 50%;
+
+  span, &:before, &:after {
+    content: "";
+    height: 2px;
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    will-change: margin, transform;
+    transform: translate(-50%, -50%);
+    border-radius: 1px;
   }
   span {
-    &, &:before, &:after {
-      display: inline-block;
-      vertical-align: middle;
-      width: 30px;
-      height: 4px;
-      background: #FFFFFF;
-      border-radius: 1px;
-      position: relative;
-      top: 0px;
-      transition: all .3s ease-in-out;
-    }
-    &:after {
-      position: absolute;
-      content: "";
-      top: auto;
-      bottom: 9px;
-    }
-    &:before {
-      position: absolute;
-      content: "";
-      top: 9px;
-    }
+    transition: opacity 0.4s 0.3s;
+  }
+  &:before {
+    transition: margin 0.4s 0.3s, transform 0.2s;
+    margin-top: -6px;
+  }
+  &:after {
+    transition: margin 0.4s 0.3s, transform 0.2s;
+    margin-top: 6px;
+  }
+  &:hover {
+    background: #261F4D;
   }
 
-  &.active {
+  &.active{
     span {
-      transform: rotate(45deg);
-      &:before {
-        transform: translate(0px, -9px) rotate(-90deg);
-      }
-      &:after {
-        transform: translate(0px, 9px) rotate(-90deg);
-      }
-      &, &:before, &:after {
-        background: #fff;
-      }
+      transition: opacity 0.5s;
+      opacity: 0;
     }
-    &:hover {
-      span {
-        &, &:before, &:after {
-          background: #fff;
-        }
-      }
+    &:after, &:before {
+      transition: margin 0.5s, transform 0.4s 0.3s;
+      margin-top: 0;
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }
+
+
+
+
 
 @media (max-width: $lg) {
   .burger {
+    display: block;
+
   }
 }
 
-@media (max-width: $sm) {
-  .burger {
-    width: 50px;
-    height: 50px;
-    span {
-      &, &:before, &:after {
-        width: 23px;
-        height: 3px;
-      }
-      &:after {
-        bottom: 7px;
-      }
-      &:before {
-        top: 7px;
-      }
-    }
-    &.active {
-      span {
-        &:before {
-          transform: translate(0px, -7px) rotate(-90deg);
-        }
-        &:after {
-          transform: translate(0px, 7px) rotate(-90deg);
-        }
-
-      }
-    }
-  }
-}
