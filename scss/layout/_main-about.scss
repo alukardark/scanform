@@ -1,6 +1,6 @@
 .main-about {
   background: #fff;
-  padding: 60px 0 50px;
+  padding: 60px 0;
   &__row {
     display: flex;
     justify-content: space-between;
@@ -39,14 +39,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    i{
+    i {
       width: 29px;
       min-width: 29px;
       height: 31px;
       display: inline-block;
       margin-right: 15px;
     }
-    &:hover{
+    &:hover {
       //color: #51497B;
       //border-color: #51497B;
     }
@@ -60,10 +60,10 @@
     margin: 40px 0 0;
     li {
       margin-right: 60px;
-      &:last-of-type{
+      &:last-of-type {
         margin-right: 0;
       }
-      span{
+      span {
         text-transform: uppercase;
         font-weight: bold;
         font-size: 20px;
@@ -74,6 +74,133 @@
       }
       p {
         margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .main-about {
+    padding: 40px 0 50px;
+    &__title {
+      p{
+        font-size: 16px;
+      }
+    }
+    &__file{
+    }
+    &__col{
+      &:last-of-type{
+        width: 60%;
+      }
+    }
+
+
+    &__advantages {
+      justify-content: space-between;
+      margin: 30px 0 0;
+      li {
+        margin-right: 0;
+        width: 30%;
+
+        span {
+          font-size: 18px;
+        }
+        strong{
+          font-size: 23px;
+          margin-bottom: 2px;
+          display: block;
+        }
+      }
+    }
+
+
+  }
+}
+@media (max-width: $md) {
+  .main-about {
+    padding: 20px 0 40px;
+    &__row {
+      flex-direction: column;
+    }
+    &__col {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    &__title {
+      margin-bottom: 0px;
+      h2 {
+        margin: 0 0 5px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        max-width: 300px;
+      }
+    }
+
+    &__file {
+      width: 100%;
+      height: 44px;
+      font-size: 14px;
+      padding: 0 20px;
+      margin-top: 25px;
+      i {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+    }
+    &__advantages {
+      justify-content: space-between;
+      padding-bottom: 20px;
+      margin: 25px 0 0;
+      li {
+        margin-right: 15px;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        span {
+          font-size: 14px;
+        }
+        strong{
+          font-size: 18px;
+        }
+      }
+    }
+
+
+    &__row{
+
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main-about {
+    &__file {
+      font-size: 12px;
+      i {
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+    }
+    &__advantages {
+      li {
+        width: 30%;
+        margin-right: 0;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        span {
+          font-size: 12px;
+        }
+        strong{
+          font-size: 16px;
+        }
       }
     }
   }

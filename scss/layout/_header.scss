@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   padding: 15px 0 15px;
   //background: #EFEEF3;
   //background: #f8f7fe;
@@ -126,13 +126,14 @@
     }
   }
   .scrollbar{
-    padding: 5px 0;
+    //padding: 5px 0;
   }
   &__mobile-wrap{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
+    padding: 5px 0;
   }
   &__mobile {
     width: 100%;
@@ -141,21 +142,35 @@
     right: 0;
     top: 0;
     z-index: 100;
-    will-change: opacity, transform;
+    will-change: opacity, visibility;
     opacity: 0;
     pointer-events: none;
-    transform: translate(100%, 0);
-    transition: opacity 0.8s, transform 0.4s;
+    //transform: translate(100%, 0);
     overflow: auto;
+    transition:  all 0.3s ease-in-out;
+    visibility: hidden;
     background: #F2F0F6;
   }
   &.active {
     .header__mobile {
       pointer-events: all;
-      transition: opacity 0.2s, transform 0.3s;
-      transform: translate(0, 0) !important;
+      transition:  all 0.2s ease-in-out;
       opacity: 1;
+      visibility: visible;
     }
+    .header__mobile-animate{
+      transform: translateY(0px);
+      bottom: 0;
+    }
+  }
+  &__mobile-animate{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out transform;
+    transform: translateY(-20px);
   }
 }
 

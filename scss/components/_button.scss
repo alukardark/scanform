@@ -1164,3 +1164,34 @@ https://oreillymedia.github.io/Using_SVG/extras/ch07-textpaths.html */
     background: #4A3AA9;
   }
 }
+
+
+@media (max-width: $md) {
+  .button-black{
+    font-size: 14px;
+    height: 55px;
+    min-width: 115px;
+    padding: 0 10px;
+  }
+  .button-black-border{
+    font-size: 14px;
+    height: 55px;
+    min-width: 155px;
+    padding: 0 10px;
+  }
+  .button-purple{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $sm) {
+  .button-black{
+    font-size: 12px;
+  }
+  .button-black-border{
+    font-size: 12px;
+  }
+  .button-purple{
+    font-size: 12px;
+  }
+}

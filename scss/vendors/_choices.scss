@@ -102,7 +102,13 @@
 }
 
 @media (max-width: $md) {
-
+  .choices__inner {
+    font-size: 14px;
+    height: 50px;
+  }
+  .choices__list--dropdown .choices__item {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: $sm) {

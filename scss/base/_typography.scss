@@ -11,11 +11,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font: inherit;
   font-size: 100%;
-  line-height: 1.18;
+  line-height: 1.2;
   margin: 0;
   font-family: $font-add;
   font-weight: 500;
-  strong{
+  strong {
     font-weight: inherit;
     color: #6455BF;
   }
@@ -49,55 +49,46 @@ h3 {
   font-weight: bold;
 }
 
-h4 {
-  font-size: 23px;
-  margin: 10px 0;
-  font-weight: 500;
+@media (max-width: $xl) {
+  h1{
+    font-size: 45px;
+  }
 }
-
-
 @media (max-width: $lg) {
   h1 {
-    font-size: 45px;
-    line-height: 43px;
-    margin: 50px 0;
+    font-size: 32px;
   }
   h2 {
-    font-size: 38px;
-    line-height: 43px;
+    font-size: 30px;
   }
   h3 {
-    font-size: 34px;
+    font-size: 23px;
   }
 }
 
 @media (max-width: $md) {
   h1 {
-    font-size: 40px;
-    line-height: 1;
+    font-size: 26px;
+    margin-top: 0;
   }
   h2 {
-    font-size: 35px;
-    line-height: 1;
+    font-size: 26px;
+    margin: 15px 0;
   }
   h3 {
-    font-size: 30px;
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
   }
 }
 
 @media (max-width: $sm) {
-  h1 {
-    font-size: 38px;
-    margin: 25px 0;
-  }
-  h2 {
-    font-size: 38px;
-    margin: 25px 0;
+  p {
+    font-size: 12px;
+    margin: 15px 0;
   }
   h3 {
-    font-size: 30px;
-  }
-  h4 {
-    font-size: 20px;
+    font-size: 16px;
   }
 }

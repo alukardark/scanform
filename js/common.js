@@ -78,10 +78,6 @@ function easeOutQuart(x) {
 // }
 
 
-
-
-
-
 jQuery(document).ready(function ($) {
 
     $("input[type='tel']").inputmask({"mask": "+7(999) 999-9999"});
@@ -100,11 +96,17 @@ jQuery(document).ready(function ($) {
             prevEl: '.main-result .main-result__prev',
         },
 
-        // breakpoints: {
-        //     1199: {
-        //
-        //     },
-        // },
+        breakpoints: {
+            989: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            575: {
+                slidesPerView: 1,
+            },
+        },
     });
 
     document.querySelectorAll('.scrollbar').forEach(el => {
@@ -116,22 +118,22 @@ jQuery(document).ready(function ($) {
 
     var width = $(window).width();
 
-    $('.burger').click(function(){
+    $('.burger').click(function () {
         $('.burger').toggleClass('active');
         $('body').toggleClass('overflow-hide');
         $('.header').toggleClass('active');
+
         width = $(window).width();
     });
 
 
-
-    $( window ).resize(function() {
-        if(window.matchMedia('(max-width: 989px)').matches){
-            if ($(window).width()==width) return;
+    $(window).resize(function () {
+        if (window.matchMedia('(max-width: 989px)').matches) {
+            if ($(window).width() == width) return;
             width = $(window).width();
 
             var mobileMenu = $('.header');
-            if(mobileMenu.hasClass('active')){
+            if (mobileMenu.hasClass('active')) {
                 $('.burger').removeClass('active');
                 $('body').removeClass('overflow-hide');
                 $('.header').removeClass('active');
@@ -164,42 +166,71 @@ if (document.querySelector('.js-choice') !== null) {
 }
 
 
-var downloadContainer = document.querySelector('.main-about__file');
+var downloadContainer = document.querySelectorAll('.main-about__file');
 var loopEnd = false;
-var animation = lottie.loadAnimation({
-    container: downloadContainer.querySelector('i'),
-    path: '/data.json',
-    renderer: 'svg',
-    loop: true,
-    autoplay: false,
-});
+var animation = '';
+var i = 1;
 
-animation.setSpeed(1.5);
+downloadContainer.forEach(el => {
+    if (i == 1) {
+        animation = lottie.loadAnimation({
+            container: el.querySelector('i'),
+            path: '/data.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: false,
+        });
 
-downloadContainer.addEventListener("mouseenter", function () {
-    // animation.setDirection(1);
-    animation.play();
-    loopEnd = false;
-});
-downloadContainer.addEventListener("mouseleave", function () {
-    // animation.setDirection(-1);
-    // animation.play();
-    loopEnd = true;
-});
+        animation.setSpeed(1.5);
 
-// animation.addEventListener('enterFrame', function (e) {
-//     if(e.currentTime >= e.totalTime-1 && loopEnd){
-//         animation.goToAndStop(0);
-//     }
-// });
+        el.addEventListener("mouseenter", function () {
+            animation.play();
+            loopEnd = false;
+        });
+        el.addEventListener("mouseleave", function () {
+            loopEnd = true;
+        });
 
-animation.addEventListener('loopComplete', function () {
-    if (loopEnd) {
-        animation.goToAndStop(0);
+        animation.addEventListener('loopComplete', function () {
+            if (loopEnd) {
+                animation.goToAndStop(0);
+            } else {
+                animation.play();
+            }
+        });
     }else{
-        animation.play();
+        animation2 = lottie.loadAnimation({
+            container: el.querySelector('i'),
+            path: '/data.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: false,
+        });
+
+        animation2.setSpeed(1.5);
+
+        el.addEventListener("mouseenter", function () {
+            animation2.play();
+            loopEnd = false;
+        });
+        el.addEventListener("mouseleave", function () {
+            loopEnd = true;
+        });
+
+        animation2.addEventListener('loopComplete', function () {
+            if (loopEnd) {
+                animation2.goToAndStop(0);
+            } else {
+                animation2.play();
+            }
+        });
     }
+    i++;
 });
+
+
+
+
 
 
 
