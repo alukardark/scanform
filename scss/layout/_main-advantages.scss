@@ -136,6 +136,18 @@
     }
   }
 
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 55px;
+    .main-about__advantages {
+      margin-top: -10px;
+      max-width: 750px;
+      width: 100%;
+    }
+  }
+
 }
 
 @media (max-width: $xl) {
@@ -143,6 +155,12 @@
     &__po {
       padding: 20px 230px 20px 30px;
       background-size: 250px auto;
+    }
+    &__wrap {
+      .main-about__advantages {
+        max-width: none;
+        width: auto;
+      }
     }
   }
 }
@@ -167,9 +185,10 @@
       background-size: contain;
     }
 
-   &__status{
-     padding: 35px 20px;
-   }
+    &__status {
+      padding: 35px 20px;
+    }
+
     &__po {
       overflow: hidden;
       position: relative;
@@ -188,6 +207,12 @@
       }
     }
 
+    &__wrap{
+      .main-about__advantages{
+        max-width: 432px;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -263,6 +288,14 @@
           margin-bottom: 10px;
           padding-left: 20px;
         }
+      }
+    }
+
+    &__wrap{
+      flex-direction: column;
+      .main-about__advantages{
+        margin: 25px 0 0;
+        max-width: none;
       }
     }
   }

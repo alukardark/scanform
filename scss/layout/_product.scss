@@ -1,0 +1,133 @@
+.product {
+  padding-top: 50px;
+  &__table-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  &__table-title {
+    font-weight: 500;
+    line-height: 1.6;
+    text-transform: uppercase;
+    border-bottom: 2px solid #49495A;;
+    padding-bottom: 18px;
+    width: 100%;
+  }
+  &__table-row {
+    max-width: 365px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    border-right: 2px solid #fff;
+    &:nth-of-type(4n+4), &:nth-of-type(4n+5) {
+      background: #F3F3F3;
+    }
+
+  }
+  &__table-cell {
+    font-size: 14px;
+    padding: 6px 10px;
+    width: 50%;
+    &:last-of-type {
+      font-weight: 500;
+    }
+  }
+  &__table {
+    max-width: 730px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    &--one {
+      max-width: 365px;
+      justify-content: flex-end;
+      .product__table-row {
+        border-right: none;
+        background: #fff;
+        &:nth-of-type(odd) {
+          background: #F3F3F3;
+        }
+      }
+    }
+  }
+
+  .main-advantages__list{
+    padding: 20px 0 65px;
+    li{
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .product {
+    &__table-row {
+      max-width: 300px;
+    }
+    &__table {
+      max-width: 600px;
+      &--one {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .product {
+    padding: 40px 0 0;
+    &__table-row {
+      max-width: 50%;
+    }
+    &__table {
+      max-width: 100%;
+      &--one {
+        max-width: 50%;
+        .product__table-row {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .product {
+    padding: 30px 0 0;
+    &__table-row {
+      max-width: 100%;
+      background: #fff !important;
+      &:nth-of-type(odd) {
+        background: #F3F3F3 !important;
+      }
+    }
+    &__table {
+      &--one {
+        max-width: 100%;
+      }
+    }
+
+    .main-advantages__list{
+      padding: 20px 0 30px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .product {
+    &__table-cell{
+      font-size: 12px;
+      padding: 6px 8px;
+    }
+    &__table-title{
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+  }
+}

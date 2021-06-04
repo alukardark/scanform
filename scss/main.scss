@@ -36,14 +36,18 @@
 @import 'layout/main-result';
 @import 'layout/main-news';
 @import 'layout/footer';
+@import 'layout/main-clients';
+@import 'layout/product';
+@import 'layout/inner-page';
 // 5. Components
 @import //'components/checkbox-list',
 'components/burger',
 'components/pagination',
-  //'components/breadcrumbs',
+'components/breadcrumbs',
 'components/button',
 'components/feedback',
-'components/soc';
+'components/soc',
+'components/online-demo';
 //'components/modal',
 //'components/waves-effect',
 //'components/add-basket-message',

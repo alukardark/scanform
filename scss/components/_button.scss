@@ -122,10 +122,9 @@
 }
 
 .button--hyperion {
-  font-family: input-mono-narrow, monospace;
-  font-weight: 500;
-  padding: 1rem 1.5rem;
-  border: 1px solid #000;
+  //font-family: input-mono-narrow, monospace;
+  //font-weight: 500;
+  //border: 1px solid #000;
   overflow: hidden;
   color: #fff;
 }
@@ -141,7 +140,7 @@
 
 .button--hyperion > span > span {
   overflow: hidden;
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
 }
 
 .button--hyperion:hover > span > span {
@@ -1084,7 +1083,7 @@ https://oreillymedia.github.io/Using_SVG/extras/ch07-textpaths.html */
   font-size: 18px;
   text-align: center;
   color: #FFFFFF;
-  background: #000000;
+  background: #261F4D;
   border-radius: 4px;
   min-width: 215px;
   height: 55px;
@@ -1096,11 +1095,8 @@ https://oreillymedia.github.io/Using_SVG/extras/ch07-textpaths.html */
     background: #261F4D;
     color: #fff;
   }
-  .button__bg {
-    background: #000000;
-  }
-  &:hover {
-    background: #261F4D;
+  &:before {
+    background: #000;
   }
 }
 
@@ -1121,47 +1117,26 @@ https://oreillymedia.github.io/Using_SVG/extras/ch07-textpaths.html */
     border-color: #51497B;
     color: #51497B;
   }
-
-  .button__bg {
-    background: transparent;
-    border: 2px solid #000000;
-    &:before, &:after {
-      background: #fff;
-    }
-    &:after {
-    }
-
-  }
-  &:hover {
-    .button__bg {
-      border-color: #51497B;
-    }
-  }
-
 }
 
 .button-purple {
   font-size: 18px;
   text-align: center;
   color: #FFFFFF;
-  background: #6455BF;
+  background: #4A3AA9;
   border-radius: 4px;
   min-width: 215px;
   height: 55px;
-  padding: 0 33px;
+  padding: 0 33px 1px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 1px;
   &:hover {
     background: #4A3AA9;
     color: #fff;
   }
-  .button__bg {
+  &:before {
     background: #6455BF;
-  }
-  &:hover {
-    background: #4A3AA9;
   }
 }
 
@@ -1169,13 +1144,13 @@ https://oreillymedia.github.io/Using_SVG/extras/ch07-textpaths.html */
 @media (max-width: $md) {
   .button-black{
     font-size: 14px;
-    height: 55px;
+    height: 44px;
     min-width: 115px;
     padding: 0 10px;
   }
   .button-black-border{
     font-size: 14px;
-    height: 55px;
+    height: 44px;
     min-width: 155px;
     padding: 0 10px;
   }
