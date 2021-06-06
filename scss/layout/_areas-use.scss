@@ -1,0 +1,133 @@
+.areas-use {
+  padding: 35px 0 5px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 55px;
+  }
+  li {
+    display: flex;
+    width: 47%;
+    margin-bottom: 50px;
+    h4 {
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.35;
+      color: #414141;
+      margin: 10px 0;
+    }
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      color: #000000;
+      display: inline-block;
+      padding-bottom: 2px;
+      border-bottom: 3px solid #000;
+    }
+  }
+  &__img {
+    margin-right: 30px;
+    width: 100px;
+    min-width: 100px;
+    height: 90px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include bgsvg('<svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25.9615 13.9046C25.9615 20.6109 20.5249 26.0474 13.8186 26.0474C7.11231 26.0474 1.67578 20.6109 1.67578 13.9046C1.67578 7.19825 7.11231 1.76172 13.8186 1.76172C20.5249 1.76172 25.9615 7.19825 25.9615 13.9046Z" stroke="#6C60B7" stroke-width="2"/>
+</svg>
+
+');
+  }
+}
+
+@media (max-width: $xl) {
+  .areas-use {
+    padding: 25px 0 5px;
+    &__img {
+      margin-right: 25px;
+      width: 85px;
+      min-width: 85px;
+      height: 80px;
+    }
+    li {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .areas-use {
+    padding: 25px 0 5px;
+    li {
+      flex-direction: column;
+    }
+    &__img {
+      margin-right: 0px;
+      margin-bottom: 15px;
+    }
+    &__list {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .areas-use {
+    padding: 15px 0 0px;
+    &__list {
+    }
+    &__img {
+      width: 75px;
+      min-width: 75px;
+      height: 60px;
+    }
+    li {
+      margin-bottom: 45px;
+      h4 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+      a {
+
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .areas-use {
+    &__list{
+      margin-bottom: 0;
+    }
+
+    li{
+      width: 100%;
+      h4{
+        font-size: 14px;
+      }
+      p{
+        font-size: 12px;
+      }
+      a{
+        font-size: 12px;
+      }
+    }
+
+  }
+}

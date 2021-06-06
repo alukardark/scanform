@@ -1,0 +1,120 @@
+.video-scan {
+  background: #F2F0F6;
+  padding: 60px 0 5px;
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    font-size: 20px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    max-width: 29%;
+  }
+  &__link {
+    width: 65.5%;
+    min-width: 65.5%;
+    height: 397px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &:after {
+      content: '';
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    &:before {
+      content: '';
+      width: 85px;
+      height: 85px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      background-color: #FFFFFF;
+      z-index: 1;
+      border-radius: 50%;
+      background-position: calc(50% + 3px) 50%;
+      background-repeat: no-repeat;
+      transition: .2s ease-in-out all;
+      background-size: 29px auto;
+
+      @include bgsvg('<svg  viewBox="0 0 29 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 18L1 1V35L28 18Z" fill="#6C60B7" stroke="#6C60B7" stroke-width="2" stroke-linejoin="round"/>
+</svg>
+');
+    }
+    &:hover {
+      &:before {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0px 0px 6px 6px rgba(88, 88, 88, .5);
+      }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .video-scan {
+    &__link {
+      height: 340px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .video-scan {
+    padding: 50px 0 0px;
+    p {
+      font-size: 18px;
+    }
+    &__link {
+      height: 250px;
+      &:before {
+        width: 65px;
+        height: 65px;
+        background-size: 22px auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .video-scan {
+    padding: 30px 0 15px;
+    &__wrap {
+      flex-direction: column;
+    }
+    p {
+      font-size: 16px;
+    }
+    &__text {
+      max-width: 330px;
+      margin-bottom: 10px;
+    }
+    &__link {
+      width: 100%;
+      min-width: 100%;
+      height: 280px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .video-scan {
+    p {
+      font-size: 14px;
+    }
+    &__link {
+      height: 250px;
+    }
+  }
+}
