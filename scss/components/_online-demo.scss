@@ -255,14 +255,12 @@
       }
       .zoom-ico{
         &:before,&:after{
-          background-size: 25px;
           background-position: 20px 50%;
         }
       }
       .skype-ico{
         &:before,&:after{
-          background-size: 25px auto;
-          background-position: 22px 50%;
+          background-position: 20px 50%;
         }
       }
     }
@@ -278,8 +276,8 @@
     }
     .wpcf7-radio {
       & > span {
-        width: 125px;
-        height: 65px;
+        width: 132px;
+        height: 50px;
         font-size: 14px;
       }
     }

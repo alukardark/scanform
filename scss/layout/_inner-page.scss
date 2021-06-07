@@ -3,7 +3,7 @@
     font-size: 54px;
     margin: 0;
   }
-  h2{
+  h2 {
     font-size: 42px;
   }
   .main-banner:not(.main-banner--product) {
@@ -28,6 +28,39 @@
         }
       }
     }
+    ol {
+      li {
+        margin-bottom: 8px;
+        line-height: 1.3;
+      }
+    }
+
+    img {
+      margin: 10px 0 30px;
+    }
+
+    .alignleft,
+    img.alignleft {
+      display: inline;
+      float: left;
+      margin-right: 6px;
+    }
+    .alignright,
+    img.alignright {
+      display: inline;
+      float: right;
+      margin-left: 6px;
+    }
+    .aligncenter,
+    img.aligncenter {
+      clear: both;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p {
+      clear: both;
+    }
   }
 }
 
@@ -36,7 +69,7 @@
     h1 {
       font-size: 45px;
     }
-    h2{
+    h2 {
       font-size: 36px;
     }
   }
@@ -47,7 +80,7 @@
     h1 {
       font-size: 42px;
     }
-    h2{
+    h2 {
       font-size: 32px;
     }
   }
@@ -61,7 +94,7 @@
     h1 {
       font-size: 32px;
     }
-    h2{
+    h2 {
       font-size: 28px;
     }
     .content {
@@ -69,7 +102,7 @@
         li {
           font-size: 14px;
           padding-left: 15px;
-          &:before{
+          &:before {
             top: 7px;
           }
         }
@@ -80,24 +113,40 @@
 
 @media (max-width: $sm) {
   .inner-page {
+    .main-banner:not(.main-banner--product) {
+      padding-bottom: 18px;
+    }
     h1 {
       font-size: 26px;
     }
-    h2{
+    h2 {
       font-size: 24px;
     }
     .content {
-      ul {
-        li {
-          font-size: 12px;
-          padding-left: 11px;
-          &:before{
-            top: 5px;
-            width: 3px;
-            height: 3px;
-          }
-        }
+      img {
+        margin: 0 0 20px;
       }
+      p {
+        font-size: 14px;
+        margin: 20px 0;
+      }
+      ol {
+        margin: 20px 0;
+      }
+      ul {
+        margin: 20px 0;
+      }
+      //ul {
+      //  li {
+      //    font-size: 12px;
+      //    padding-left: 11px;
+      //    &:before{
+      //      top: 5px;
+      //      width: 3px;
+      //      height: 3px;
+      //    }
+      //  }
+      //}
     }
   }
 }

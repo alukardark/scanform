@@ -349,14 +349,12 @@
         font-size: 18px;
       }
     }
-
     &__price-mini {
       font-size: 14px;
       strong {
         font-size: 18px;
       }
     }
-
     &__buttons {
       display: flex;
       flex-wrap: nowrap;
@@ -390,7 +388,6 @@
         }
       }
     }
-
     &__product {
       flex-direction: column;
     }
@@ -404,9 +401,9 @@
       margin-bottom: 10px;
     }
     &__caption {
-      font-size: 18px;
+      font-size: 16px;
+      margin-top: 3px;
     }
-
     &__product {
       .button-black {
         min-width: auto;
@@ -416,6 +413,12 @@
         min-width: auto;
         height: 44px;
       }
+    }
+
+    &__title{
+      font-size: 32px;
+      font-weight: 500;
+      font-family: $font-add;
     }
   }
 }
@@ -442,7 +445,11 @@
       }
     }
     &__caption {
-      font-size: 16px;
+      font-size: 14px;
+    }
+
+    &__title{
+      font-size: 26px;
     }
   }
 }
