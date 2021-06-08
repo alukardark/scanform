@@ -1,20 +1,16 @@
 .burger {
-  //position: fixed;
   z-index: 20;
   transition: all 0.3s ease-in-out;
   width: 41px;
   height: 41px;
-
   right: 0;
   background: #11161B;
   border-radius: 50%;
   position: absolute;
   display: none;
   cursor: pointer;
-
   transform: translateY(-50%);
   top: 50%;
-
   span, &:before, &:after {
     content: "";
     height: 2px;
@@ -41,7 +37,6 @@
   &:hover {
     background: #261F4D;
   }
-
   &.active{
     span {
       transition: opacity 0.5s;
@@ -68,7 +63,6 @@
 @media (max-width: $lg) {
   .burger {
     display: block;
-
   }
 }
 

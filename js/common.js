@@ -56,6 +56,32 @@ jQuery(document).ready(function ($) {
         },
     });
 
+
+
+    $(".main-clients__img[data-fancybox]").fancybox({
+        afterShow: function( instance, slide ) {
+
+            new Swiper('.fancy-modal__review .swiper-container', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loopFillGroupWithBlank: true,
+                speed: 800,
+                pagination: {
+                    el: '.fancy-modal__review .swiper-nav-info',
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: '.fancy-modal__next',
+                    prevEl: '.fancy-modal__prev',
+                },
+            });
+
+        }
+    });
+
+
+
     document.querySelectorAll('.scrollbar').forEach(el => {
         new SimpleBar(el, {
             autoHide: false
@@ -96,6 +122,8 @@ jQuery(document).ready(function ($) {
         $(this).parents('form').find('span').removeClass('active');
         $(this).parent('span').addClass('active');
     });
+
+
 
 });
 

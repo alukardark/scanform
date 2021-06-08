@@ -46,6 +46,27 @@
   }
   &__wrap {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      display: block;
+      &:hover {
+        .main-result__img:before {
+          opacity: 1;
+        }
+        .main-result__img:after {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+    li {
+      width: 33.2%;
+      margin-bottom: 40px;
+      margin-right: .2%;
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
   }
   &__prev {
     z-index: 2;
@@ -67,7 +88,11 @@
     cursor: pointer;
     transition: .2s ease-in-out all;
     &:hover {
-      opacity: .7;
+      background-color: rgba(0, 0, 0, 0.6);
+      @include bgsvg('<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 16.5L1.5 8.50001L9.5 0.500008" stroke="#fff" stroke-opacity="0.6"/>
+</svg>
+');
     }
   }
   &__next {
@@ -90,29 +115,20 @@
     cursor: pointer;
     transition: .2s ease-in-out all;
     &:hover {
-      opacity: .7;
-    }
-  }
-  .swiper-slide {
-    a {
-      display: block;
-      &:hover {
-        .main-result__img:before {
-          opacity: 1;
-        }
-        .main-result__img:after {
-          transform: translate(-50%, -50%) scale(1);
-        }
-      }
+      background-color: rgba(0, 0, 0, 0.6);
+      @include bgsvg('<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 0.499992L8.5 8.49999L0.499997 16.5" stroke="#fff" stroke-opacity="0.6"/>
+</svg>
+');
     }
   }
 
-  &__row{
+  &__row {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
   }
-  &__all-link{
+  &__all-link {
     font-size: 18px;
     color: #000000;
     border-bottom: 2px solid #000;
@@ -125,6 +141,10 @@
     }
   }
 
+}
+
+ul.main-result__wrap {
+  margin: 40px 0 0;
 }
 
 @media (max-width: 1315px) {
@@ -173,6 +193,17 @@
       padding-bottom: 3px;
       transform: translateY(-2px);
       margin-left: auto;
+    }
+
+    &__wrap{
+      li {
+        width: 49.5%;
+        margin-bottom: 30px;
+        margin-right: .5% !important;
+        &:nth-of-type(2n) {
+          margin-right: 0 !important;
+        }
+      }
     }
   }
 }
@@ -232,18 +263,38 @@
       margin: 10px 0;
     }
 
+    &__wrap{
+      li {
+        margin-bottom: 25px;
+      }
+    }
 
   }
+  ul.main-result__wrap {
+    margin: 20px 0 0;
+  }
+
+
 }
+
 @media (max-width: $sm) {
   .main-result {
-    &__row{
+    &__row {
       flex-direction: column;
     }
     &__all-link {
       font-size: 14px;
       margin-left: 0;
       margin-bottom: 15px;
+    }
+
+    &__wrap{
+      li {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0 !important;
+
+      }
     }
   }
 }

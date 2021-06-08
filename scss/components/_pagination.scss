@@ -1,9 +1,9 @@
 .pagination{
-  margin-top: 40px;
-  margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 45px;
   li{
     overflow: hidden;
     margin-right: 5px;
@@ -19,35 +19,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     background-color: transparent;
-    transition: .2s ease-in-out background, .2s ease-in-out color, .3s ease-in-out opacity;
-    border-radius: 3px;
-    width: 38px;
-    height: 38px;
+    transition: .2s ease-in-out background, .2s ease-in-out color, .2s ease-in-out opacity;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
     font-weight: bold;
     font-size: 20px;
     color: #000000;
-    &:hover{
-      //background: #24242D;
-      //color: #fff;
-      opacity: .6;
-    }
     &.active{
-      background: #24242D;
+      background: #6455BF;
       color: #fff;
       opacity: 1;
       pointer-events: none;
     }
   }
+  a{
+    cursor: pointer;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  span{
+    color: rgba(0, 0, 0, 0.6);
+  }
   a.pagination__next, span.pagination__next{
-    background: url(../img/arrow-black.svg) center/10px 18px no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 22px;
+    @include bgsvg('<svg viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.47363 1.3158L11.1578 11L1.47363 20.6842" stroke="black" stroke-width="2"/>
+</svg>
+');
     &:hover{
     }
   }
   a.pagination__prev, span.pagination__prev{
-    transform: rotate(180deg);
-    background: url(../img/arrow-black.svg) center/10px 18px no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 22px;
+    @include bgsvg('<svg  viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.6846 20.6842L2.00036 11L11.6846 1.31578" stroke="black" stroke-width="2"/>
+</svg>
+');
+
     &:hover{
     }
   }
@@ -55,6 +70,6 @@
 
 @media (max-width: $md) {
     .pagination{
-      margin-top: 30px;
+      display: none;
     }
 }

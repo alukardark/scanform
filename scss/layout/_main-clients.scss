@@ -10,6 +10,22 @@
     background-size: cover;
     margin-bottom: 12px;
     position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: .2s ease-in-out all;
+      background: linear-gradient(0deg, rgba(109, 85, 255, 0.6), rgba(109, 85, 255, 0.6));
+    }
+    &:hover{
+      &:before{
+        opacity: 1;
+      }
+    }
   }
 
   &__title {
@@ -74,11 +90,12 @@
     display: flex;
     align-items: center;
   }
-  a.main-clients__site {
+  a.main-clients__site, &__site {
     font-size: 14px;
     text-decoration-line: underline;
     color: #000000;
     margin-left: 5px;
+    margin-top: -5px;
     &:hover {
       text-decoration-color: transparent;
       opacity: .8;
@@ -87,7 +104,9 @@
   &__soc {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     a {
+      margin-bottom: 5px;
       width: 31px;
       height: 31px;
       display: inline-block;
@@ -141,6 +160,16 @@
   }
   &__wrap {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 32%;
+      margin-bottom: 55px;
+      margin-right: 2%;
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
   }
   &__prev {
     z-index: 2;
@@ -162,7 +191,11 @@
     cursor: pointer;
     transition: .2s ease-in-out all;
     &:hover {
-      opacity: .7;
+      background-color: rgba(0, 0, 0, 0.6);
+      @include bgsvg('<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 16.5L1.5 8.50001L9.5 0.500008" stroke="#fff" stroke-opacity="0.6"/>
+</svg>
+');
     }
   }
   &__next {
@@ -185,7 +218,11 @@
     cursor: pointer;
     transition: .2s ease-in-out all;
     &:hover {
-      opacity: .7;
+      background-color: rgba(0, 0, 0, 0.6);
+      @include bgsvg('<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 0.499992L8.5 8.49999L0.499997 16.5" stroke="#fff" stroke-opacity="0.6"/>
+</svg>
+');
     }
   }
 
@@ -208,7 +245,9 @@
   }
 
 }
-
+ul.main-clients__wrap {
+  margin: 40px 0 0;
+}
 @media (max-width: 1315px) {
   .main-clients {
     &__prev {
@@ -258,6 +297,16 @@
       transform: translateY(-2px);
       margin-left: auto;
     }
+
+    &__wrap{
+      li {
+        width: 48.5%;
+        margin-right: 3% !important;
+        &:nth-of-type(2n) {
+          margin-right: 0 !important;
+        }
+      }
+    }
   }
 }
 
@@ -295,6 +344,18 @@
     &__title {
       font-size: 18px;
     }
+
+    &__wrap{
+      li {
+        width: 100%;
+        margin-bottom: 35px;
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  ul.main-clients__wrap {
+    margin: 20px 0 0;
   }
 }
 
