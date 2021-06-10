@@ -1,0 +1,501 @@
+.about {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    max-width: 510px;
+    line-height: 1.3;
+  }
+  &__video {
+    width: 560px;
+    height: 332px;
+    position: relative;
+    margin-top: 100px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -45px;
+      bottom: -75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/decor-video.png);
+      width: 188px;
+      height: 136px;
+      z-index: -1;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: -45px;
+      top: -75px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/decor-video.png);
+      width: 188px;
+      height: 136px;
+      z-index: -1;
+    }
+  }
+  &__video-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &:after {
+      content: '';
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    &:before {
+      content: '';
+      width: 78px;
+      height: 78px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      background-color: #FFFFFF;
+      z-index: 1;
+      border-radius: 50%;
+      background-position: calc(50% + 3px) 50%;
+      background-repeat: no-repeat;
+      transition: .2s ease-in-out all;
+      background-size: 29px auto;
+
+      @include bgsvg('<svg  viewBox="0 0 29 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 18L1 1V35L28 18Z" fill="#6C60B7" stroke="#6C60B7" stroke-width="2" stroke-linejoin="round"/>
+</svg>
+');
+    }
+    &:hover {
+      &:before {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0px 0px 6px 6px rgba(88, 88, 88, .5);
+      }
+    }
+  }
+  &__video-desc {
+    text-align: right;
+    font-style: italic;
+    color: #414141;
+    border-right: 1px solid #C1B9F1;
+    padding: 9px 13px;
+    display: block;
+    margin: 8px 0;
+  }
+
+  &__achievements {
+    border-bottom: 2px solid #000;
+  }
+  &__achievements-list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    li {
+      width: 33.33%;
+      padding: 20px 25px 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+    }
+    img {
+      margin-right: 25px;
+      display: block;
+    }
+  }
+
+  &__team {
+    padding: 65px 0 5px;
+  }
+  &__team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    li {
+      width: 23.7%;
+      margin-right: 1.73%;
+      margin-bottom: 45px;
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__team-photo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  &__team-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  &__team-speciality {
+    color: #414141;
+    font-size: 15px;
+  }
+
+  &__vacancies {
+
+  }
+  &__vacancies-title {
+    font-weight: 500;
+    font-size: 22px;
+  }
+  &__vacancies-list {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 15px;
+    li {
+      border: 1px solid rgba(177, 198, 216, 0.7);
+      border-left: 5px solid #6C60B7;
+      border-radius: 6px 5px 5px 6px;
+      padding: 14px 20px;
+      margin-bottom: 14px;
+      p {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.7);
+        margin: 10px 0;
+      }
+    }
+  }
+
+  &__partners-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__partners {
+    background: #F2F0F6;
+    padding: 60px 0 20px;
+    margin-top: 40px;
+    h3 {
+      margin: 0;
+      max-width: 150px;
+      position: relative;
+      &:after {
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include bgsvg('<svg viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.6915 9.84118L16.5408 17.0095C15.8752 17.4373 15 16.9595 15 16.1683V1.83167C15 1.0405 15.8752 0.562658 16.5408 0.990487L27.6915 8.15882C28.3038 8.55246 28.3038 9.44754 27.6915 9.84118Z" fill="black" stroke="black" stroke-linejoin="round"/>
+<rect y="8" width="16" height="2" rx="1" fill="black"/>
+</svg>
+');
+        width: 29px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        right: -60px;
+        transform: translateY(-50%);
+
+      }
+    }
+  }
+  &__partners-list {
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0;
+    padding-left: 120px;
+    li {
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .about {
+    &__text {
+      max-width: 445px;
+      margin-right: 15px;
+    }
+    &__video {
+      height: 265px;
+      width: 460px;
+    }
+    &__team-list {
+      li {
+
+      }
+    }
+    &__team-photo {
+      height: 300px;
+    }
+    &__achievements-list {
+      padding-bottom: 15px;
+      li {
+        padding: 20px 15px;
+      }
+      img {
+        margin-right: 15px;
+      }
+    }
+
+    &__partners {
+      h3 {
+        &:after {
+          right: -40px;
+        }
+      }
+    }
+    &__partners-list {
+      padding-left: 90px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .about {
+    &__video-desc {
+      padding: 3px 10px;
+    }
+    &__info {
+      flex-direction: column;
+      margin-bottom: 70px;
+      margin-top: 20px;
+    }
+    &__text {
+      max-width: 100%;
+      width: 100%;
+      margin-right: 0;
+    }
+    &__video {
+      width: 100%;
+      max-width: 560px;
+      margin-top: 25px;
+      height: 332px;
+      &:before, &:after {
+        display: none;
+      }
+    }
+    &__team-photo {
+      margin-bottom: 13px;
+    }
+    &__team {
+      padding: 35px 0 5px;
+    }
+    &__team-list {
+      li {
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 35px;
+        &:nth-of-type(4n) {
+          margin-right: 2%;
+        }
+        &:nth-of-type(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+    &__team-name {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    &__team-speciality {
+      font-size: 14px;
+    }
+
+    &__achievements-list {
+      li {
+        padding: 10px 15px;
+      }
+      img {
+        max-width: 45px;
+        margin-right: 10px;
+        max-height: 50px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    &__vacancies-list {
+    }
+
+    &__partners-row {
+      flex-direction: column;
+    }
+    &__partners {
+      padding: 40px 0 20px;
+      h3 {
+        max-width: 100%;
+        margin-bottom: 35px;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &__partners-list {
+      padding-left: 0;
+      li{
+        margin-bottom: 25px;
+        img{
+          max-width: 85%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .about {
+    &__info {
+      margin-bottom: 55px;
+      margin-top: 10px;
+    }
+    &__video {
+      width: 100%;
+      height: 280px;
+      margin-top: 10px;
+    }
+    &__video-link {
+      &:before {
+        width: 65px;
+        height: 65px;
+        background-size: 22px auto;
+      }
+    }
+    &__video-desc {
+      font-size: 14px;
+    }
+
+    &__team-photo {
+      margin-bottom: 13px;
+    }
+    &__team {
+      padding: 25px 0 0px;
+    }
+    &__team-list {
+      margin-top: 20px;
+      li {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 35px;
+        &:nth-of-type(3n) {
+          margin-right: 2%;
+        }
+        &:nth-of-type(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__achievements {
+
+    }
+    &__achievements-list {
+      flex-direction: column;
+      li {
+        width: 100%;
+        padding: 13px 0;
+      }
+      img {
+        margin-right: 15px;
+        width: 130px;
+      }
+    }
+
+    &__vacancies-title {
+      font-size: 18px;
+    }
+    &__vacancies-list {
+      li {
+        margin-bottom: 10px;
+        padding: 14px 15px;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__partners {
+      padding: 30px 0 10px;
+      h3 {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .about {
+    &__video {
+      height: 250px;
+    }
+    &__video-desc {
+      font-size: 12px;
+      padding: 5px 6px 5px 0;
+    }
+    &__team-photo {
+      margin-bottom: 10px;
+      height: 340px;
+    }
+    &__team {
+      padding: 20px 0 0px;
+    }
+    &__team-list {
+      li {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__team-name {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    &__team-speciality {
+      font-size: 12px;
+    }
+
+    &__achievements-list {
+      p {
+        font-size: 12px;
+      }
+    }
+    &__vacancies-title {
+      font-size: 16px;
+    }
+
+    &__partners {
+      margin-top: 15px;
+    }
+    &__partners-list{
+      li{
+        width: 33%;
+      }
+    }
+  }
+
+}
